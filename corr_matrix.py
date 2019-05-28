@@ -7,6 +7,7 @@ from scipy import stats
 
 
 def calculate_pvalues(df):
+    """Function to calculate p-values of the correlation"""
     df = df.dropna()._get_numeric_data()
     dfcols = pd.DataFrame(columns=df.columns)
     pvalues = dfcols.transpose().join(dfcols, how='outer')
@@ -82,7 +83,7 @@ df_masterfile_pearson_matrix = df(masterfile_pearson_matrix)
 df_mfpnz = df(mfpnz)
 
 # -- Export the results to excel files
-pearson_path = r"C:\Users\USER\Dropbox\MEng\Project\Experiments\OUTPUT\full corr matrix pearson standardised.xlsx"
+pearson_path = "" # LOCAL FILE PATH
 pearson_writer = pd.ExcelWriter(pearson_path, engine="xlsxwriter")
 
 df_masterfile_pearson_matrix.to_excel(pearson_writer, "corr")
