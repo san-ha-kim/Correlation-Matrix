@@ -16,7 +16,7 @@ def calculate_pvalues(df):
     return pvalues
 
 
-filepath = r"C:\Users\USER\Dropbox\MEng\Project\Experiments\OUTPUT\Master file.xlsx"
+filepath = "" #LOCAL FILE PATH
 
 # -- Import excel file; requires 'r' prefix to address special character strings "\"
 
